@@ -8,11 +8,7 @@ public class Palindrome {
         String n = new String();
         
         for (int i = s.length() - 1; i >= 0; i++){
-            if (i == s.length() - 1){
-                n += s.substring(i);
-            } else {
-                n += s.substring(i, i + 1);
-            }
+            n += Character.toString(s.charAt(i));
         }
 
         return n;
