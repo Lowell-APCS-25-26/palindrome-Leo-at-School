@@ -2,7 +2,7 @@ package org.APCSLowell;
 
 public class Palindrome {
     public boolean palindrome(String s){
-        s = lower(s);
+        s = lower(s.substring(4));
 
         return reverse(s).equals(s);
     }
