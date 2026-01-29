@@ -2,11 +2,11 @@ package org.APCSLowell;
 
 public class Palindrome {
     public boolean palindrome(String s){
-        s = lower(s.substring(4));
+        s = lowerPalindrome(s);
 
-        return reverse(s).equals(s);
+        return reversePalindrome(s).equals(s);
     }
-    public String reverse(String s){
+    public String reversePalindrome(String s){
         String n = new String();
         
         for (int i = s.length() - 1; i >= 0; i--){
@@ -16,7 +16,7 @@ public class Palindrome {
         return n;
     }
 
-    public String lower(String s){
+    public String lowerPalindrome(String s){
         String n = new String();
         
         char sCharacter;
