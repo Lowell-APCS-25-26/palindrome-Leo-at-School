@@ -26,7 +26,7 @@ public class Palindrome {
             //If the ascii code for the character is betweeen the values of the upper case letters,
             //add an offset to convert to the ascii code of the lowercase letters
             if (sCharacter >= 65 && sCharacter <= 90){
-                sCharacter = sCharacter + 32;
+                sCharacter = (char)((int)sCharacter + 32);
             }
 
             n += Character.toString(sCharacter);
