@@ -6,7 +6,7 @@ public class Palindrome {
 
         return reversePalindrome(s).equals(s);
     }
-    public String reversePalindrome(String s){
+    private String reversePalindrome(String s){
         String n = new String();
         
         for (int i = s.length() - 1; i >= 0; i--){
@@ -16,12 +16,16 @@ public class Palindrome {
         return n;
     }
 
-    public String lowerPalindrome(String s){
+    private String lowerPalindrome(String s){
         String n = new String();
         
         char sCharacter;
         for (int i = 0; i < s.length(); i++){
             sCharacter = s.charAt(i);
+
+            if (intIsBetween((int)sCharacter, 65, 90) || intIsBetween((int)sCharacter, 97, 122)){
+                continue;
+            }
 
             //If the ascii code for the character is betweeen the values of the upper case letters,
             //add an offset to convert to the ascii code of the lowercase letters
@@ -33,5 +37,9 @@ public class Palindrome {
         }
 
         return n;
+    }
+
+    private boolean intIsBetween(int compare, int lowerBound, int upperBound){
+        return compare >= lowerBound && compare <= upperBound;
     }
 }
