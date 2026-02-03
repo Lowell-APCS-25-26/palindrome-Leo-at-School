@@ -23,7 +23,7 @@ public class Palindrome {
         for (int i = 0; i < s.length(); i++){
             sCharacter = s.charAt(i);
 
-            if (intIsBetween((int)sCharacter, 65, 90) || intIsBetween((int)sCharacter, 97, 122)){
+            if (!isAlphabet(sCharacter)){
                 continue;
             }
 
@@ -39,7 +39,7 @@ public class Palindrome {
         return n;
     }
 
-    private boolean intIsBetween(int compare, int lowerBound, int upperBound){
-        return compare >= lowerBound && compare <= upperBound;
+    private boolean isAlphabet(char c){
+        return (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
     }
 }
